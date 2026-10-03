@@ -4,7 +4,7 @@ Single-page landing for the **On-Camera Spokesperson (Freelance / On-Demand)** g
 Video Deck. Live at **https://diffdev.io/video-marketing/** once deployed.
 
 This is a GitHub Pages *project site*. The custom domain `diffdev.io` is claimed by the
-user-site repo (`<username>.github.io`), so this repo is served automatically at
+user-site repo (`bruskiguy.github.io`), so this repo is served automatically at
 `diffdev.io/<repo-name>` — do NOT set a custom domain in this repo's Pages settings.
 
 ## How to update
