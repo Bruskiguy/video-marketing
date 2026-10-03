@@ -14,86 +14,55 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🎬</text></svg>">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0f172a;--panel:#16203a;--panel2:#121a30;--line:#27334f;--text:#e2e8f0;--muted:#94a3b8;--sky:#38bdf8;--violet:#818cf8;--gold:#fbbf24}
+:root{--bg:#0f172a;--panel:#131c33;--line:#27334f;--text:#e2e8f0;--body:#c7d2e0;--muted:#94a3b8;--sky:#38bdf8;--gold:#fbbf24}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(640px 320px at 50% -60px,rgba(56,189,248,.16),transparent 70%),radial-gradient(520px 280px at 88% 6%,rgba(129,140,248,.10),transparent 70%)}
-.wrap{max-width:920px;margin:0 auto;padding:0 20px}
-.grad{background:linear-gradient(92deg,var(--sky),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+body{background:var(--bg);color:var(--body);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:780px;margin:0 auto;padding:0 22px}
 a{color:var(--sky)}
 :focus-visible{outline:2px solid var(--sky);outline-offset:3px;border-radius:4px}
 ::selection{background:rgba(56,189,248,.35)}
 .top{position:sticky;top:0;z-index:50;background:rgba(15,23,42,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;justify-content:space-between;align-items:center;height:60px}
-.brand{font-weight:800;letter-spacing:.2px;text-decoration:none;color:var(--text);font-size:1.02rem}
-.top-cta{font-weight:700;font-size:.9rem;text-decoration:none;padding:8px 16px;border:1px solid var(--line);border-radius:999px;color:var(--text)}
-.top-cta:hover{border-color:var(--sky);color:var(--sky)}
-.hero{padding:64px 0 20px}
-.badge{display:inline-block;font-size:.78rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--sky);border:1px solid var(--line);background:var(--panel2);padding:6px 14px;border-radius:999px;margin-bottom:20px}
-h1{font-size:clamp(2.1rem,5.6vw,3.4rem);line-height:1.1;letter-spacing:-.5px;margin-bottom:16px}
-.sub{color:var(--muted);font-size:1.06rem;max-width:660px;margin-bottom:24px}
-.sub strong{color:var(--text)}
-.chips{list-style:none;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
-.chips li{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 14px;font-size:.9rem;font-weight:600}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:12px}
-.btn{display:inline-block;font-weight:800;text-decoration:none;border-radius:14px;padding:14px 22px;font-size:1rem;transition:transform .15s ease}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:linear-gradient(92deg,var(--sky),var(--violet));color:#0b1220}
-.btn.ghost{border:1px solid var(--line);color:var(--text)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.brand{font-weight:800;text-decoration:none;color:var(--text);font-size:1rem}
+.top-apply{font-weight:700;font-size:.9rem;text-decoration:none;padding:7px 16px;border-radius:999px;background:linear-gradient(92deg,var(--sky),#818cf8);color:#0b1220}
+.top-apply:hover{transform:translateY(-1px)}
+.jobhead{padding:40px 0 26px;border-bottom:1px solid var(--line)}
+.badge{display:inline-block;font-size:.75rem;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--sky);margin-bottom:14px}
+h1{color:var(--text);font-size:clamp(1.7rem,4.5vw,2.4rem);line-height:1.2;letter-spacing:-.3px;margin-bottom:8px}
+h1 span{font-weight:600;font-size:.62em;color:var(--muted)}
+.byline{color:var(--muted);font-size:.98rem;margin-bottom:18px}
+.byline strong{color:var(--text)}
+.pills{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.pills li{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:6px 14px;font-size:.85rem;font-weight:600;color:var(--text)}
+.pills .hl{border-color:rgba(251,191,36,.45);color:var(--gold)}
+.btn{display:inline-block;font-weight:800;text-decoration:none;border-radius:12px;padding:12px 20px;font-size:.98rem;transition:transform .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(92deg,var(--sky),#818cf8);color:#0b1220}
+.btn.ghost{border:1px solid var(--line);color:var(--text);margin-left:10px}
 .btn.ghost:hover{border-color:var(--sky);color:var(--sky)}
-.fine{color:var(--muted);font-size:.85rem}
-section{scroll-margin-top:80px}
-.kicker{color:var(--sky);font-weight:800;font-size:.75rem;letter-spacing:1.4px;text-transform:uppercase}
-h2{font-size:clamp(1.5rem,3.4vw,2rem);letter-spacing:-.3px;margin:6px 0 18px}
-.lead{color:var(--muted);margin-bottom:20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px}
-.card .ico{font-size:1.4rem}
-.card h3{font-size:1.05rem;margin:10px 0 6px}
-.card p{color:var(--muted);font-size:.95rem}
-.note{color:var(--muted);font-size:.92rem;margin-top:14px}
-.check{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px}
-.check li{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:.95rem;display:flex;gap:10px}
-.check .ck{color:var(--sky);font-weight:800;flex:0 0 auto}
-@media(max-width:720px){.check{grid-template-columns:1fr}}
-.step{display:flex;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin-bottom:12px}
-.num{flex:0 0 40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--sky),var(--violet));color:#0b1220;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:1.05rem}
-.step h3{font-size:1.05rem;margin-bottom:6px}
-.step p,.step li{color:var(--muted);font-size:.95rem}
-.step ul{margin:8px 0 0 18px;display:grid;gap:4px}
-.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:14px 0}
-.opt{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:16px}
-.opt .tag{font-size:.7rem;font-weight:800;letter-spacing:1px;color:var(--gold);text-transform:uppercase}
-.opt h4{margin:6px 0 4px;font-size:.98rem}
-.opt p{color:var(--muted);font-size:.88rem}
-.tip{border:1px dashed #3b4a60;background:var(--panel2);border-radius:14px;padding:13px 16px;color:var(--muted);font-size:.93rem;margin:14px 0}
+.intro{padding:26px 0 4px;font-size:1.02rem}
+h2{color:var(--text);font-size:1.28rem;letter-spacing:-.2px;margin:34px 0 10px}
+h3{color:var(--text);font-size:1.04rem;margin:22px 0 8px}
+p{margin-bottom:12px}
+ul,ol{margin:0 0 14px 22px}
+li{margin-bottom:7px}
+li::marker{color:var(--sky)}
+strong{color:var(--text)}
 code{background:#0b1220;border:1px solid var(--line);border-radius:6px;padding:2px 7px;font-size:.85rem;color:var(--gold)}
-.submit{background:linear-gradient(135deg,rgba(56,189,248,.10),rgba(129,140,248,.08));border:1px solid var(--line);border-radius:18px;padding:22px;margin:16px 0}
-.submit .btn{margin-top:12px}
-.next{list-style:none;counter-reset:n;display:grid;gap:10px}
-.next li{counter-increment:n;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 60px;position:relative;color:var(--muted);font-size:.95rem}
-.next li::before{content:counter(n);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:9px;background:var(--panel2);border:1px solid var(--line);color:var(--sky);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:.9rem}
-.next strong{color:var(--text)}
-details{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin-bottom:10px;overflow:hidden}
-summary{cursor:pointer;padding:16px 18px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+.tip{color:var(--muted);font-size:.9rem;font-style:italic;margin-bottom:14px}
+details{border-top:1px solid var(--line);padding:6px 0}
+summary{cursor:pointer;padding:10px 0;font-weight:700;color:var(--text);list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:1.3rem;color:var(--sky);flex:0 0 auto;line-height:1}
+summary::after{content:"+";font-size:1.25rem;color:var(--sky);line-height:1}
 details[open] summary::after{content:"–"}
-details[open] summary{border-bottom:1px solid var(--line)}
-.acc{padding:16px 18px}
-.note2{font-size:.85rem;color:var(--muted);font-style:italic;margin-bottom:12px}
-.script{font-family:Georgia,"Times New Roman",serif;font-size:1.02rem;line-height:1.8;color:#d7e0ea}
-.script p{margin:0 0 14px}
-.script p:last-child{margin:0}
-.faq .acc{color:var(--muted);font-size:.95rem}
-.band{margin:52px 0 0;background:linear-gradient(135deg,rgba(56,189,248,.14),rgba(129,140,248,.10));border:1px solid var(--line);border-radius:20px;padding:32px;text-align:center}
-.band h2{margin:0 0 8px}
-.band p{color:var(--muted);margin-bottom:18px}
-footer{margin-top:52px;border-top:1px solid var(--line);padding:26px 0 46px;color:var(--muted);font-size:.86rem}
-.frow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:14px}
-.frow a{text-decoration:none}
-.frow a:hover{color:var(--sky)}
-.eeo{max-width:780px;line-height:1.65;font-size:.8rem}
+.script{font-family:Georgia,"Times New Roman",serif;font-size:1.01rem;line-height:1.85;color:#d7e0ea;padding:4px 0 10px}
+.script p{margin-bottom:13px}
+.note2{color:var(--muted);font-size:.88rem;font-style:italic;margin-bottom:8px}
+.faq p.q{color:var(--text);font-weight:700;margin:16px 0 2px}
+.faq p.a{margin-bottom:10px}
+footer{margin-top:44px;border-top:1px solid var(--line);padding:22px 0 46px;color:var(--muted);font-size:.84rem}
+footer .frow{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.eeo{font-size:.78rem;line-height:1.6;max-width:720px;margin-bottom:10px}
 .mobile-cta{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(15,23,42,.94);backdrop-filter:blur(10px);border-top:1px solid var(--line)}
 .mobile-cta .btn{display:block;text-align:center}
 @media(max-width:640px){.mobile-cta{display:block}footer{padding-bottom:120px}}
@@ -103,192 +72,156 @@ footer{margin-top:52px;border-top:1px solid var(--line);padding:26px 0 46px;colo
 <header class="top">
   <div class="wrap">
     <a class="brand" href="https://diffdev.io/">🎬 Video Deck</a>
-    <a class="top-cta" href="#apply">Apply now</a>
+    <a class="top-apply" href="mailto:caleb@diffdev.io?subject=Spokesperson%20Application">Apply</a>
   </div>
 </header>
 <main class="wrap">
-<section class="hero">
-  <span class="badge">🎥 Now casting — Kyle, Texas</span>
-  <h1>Get paid <span class="grad">$100</span> to talk on&nbsp;camera.</h1>
-  <p class="sub">Video Deck makes real-human videos for 100+ software companies — product demos, tutorials, video sales letters, and social content. You read scripts from a teleprompter and bring the personality. <strong>We handle everything else.</strong></p>
-  <ul class="chips">
-    <li>💵 $100 per script</li>
+<div class="jobhead">
+  <span class="badge">Now casting — Kyle, Texas</span>
+  <h1>On-Camera Spokesperson <span>(Freelance / On-Demand)</span></h1>
+  <p class="byline"><strong>Video Deck</strong> — B2B video production for SaaS &amp; tech brands · Kyle, TX · Remote</p>
+  <ul class="pills">
+    <li class="hl">💵 $100 per script</li>
     <li>⏱️ 15–30 min per script</li>
     <li>🏠 Work from home</li>
     <li>🕒 Set your own schedule</li>
+    <li>On-demand freelance</li>
+    <li>18+ · No experience needed</li>
   </ul>
-  <div class="cta-row">
-    <a class="btn primary" href="#apply">Apply in 3 steps</a>
-    <a class="btn ghost" href="#scripts">See the audition scripts</a>
+  <a class="btn primary" href="mailto:caleb@diffdev.io?subject=Spokesperson%20Application">✉️ Apply now — email your audition</a>
+  <a class="btn ghost" href="#scripts">See audition scripts</a>
+</div>
+
+<p class="intro">Video Deck shoots, edits, and distributes high-performing videos for over 100 software companies — product demos, tutorials, video sales letters, and social content — using <strong>real human actors, not AI</strong>. Our clients pick their favorite spokespersons from our roster, and that roster is where <strong>you</strong> come in. We're looking for lively, expressive college students to join our on-demand talent pool as on-camera spokespeople. We're piloting the program in Kyle, Texas.</p>
+
+<h2>The gig</h2>
+<p><strong>What you do:</strong> read scripts from a teleprompter, on camera, and deliver them with energy and personality. That's it — we handle scripting, editing, set design, and everything else.</p>
+<p><strong>How work comes in:</strong> this is an <strong>on-demand, performance-based</strong> role. Our SaaS clients place orders for a few videos at a time and request talent. Once you pass the assessment below, you're added to our board of <strong>available actors</strong>. When an order comes in that fits you, we book you.</p>
+<p><strong>Growth:</strong> do well and clients like you? You get requested by name — meaning more bookings, more often. Stick with one client or appear across many.</p>
+<p class="tip">This is freelance gig work. There are no guaranteed minimum hours — how much you work depends entirely on demand and how well your videos land with clients.</p>
+
+<h2>Who we're looking for</h2>
+<ul>
+  <li>You're <strong>18 or older</strong> (required).</li>
+  <li>You're <strong>fun, bubbly, and full of character</strong> — lively, expressive, comfortable being yourself on camera. Think "the friend everyone wants in their group project."</li>
+  <li>You can <strong>read from a teleprompter</strong> and make it sound natural — not like you're reading. This is the #1 skill.</li>
+  <li>You're a <strong>clear English speaker</strong> with neutral or easily understandable delivery.</li>
+  <li>You're <strong>comfortable in front of a camera</strong> — no prior acting experience needed; confidence and personality matter more than a résumé.</li>
+  <li>We <strong>celebrate diversity</strong> — applicants from all backgrounds and communities are encouraged to apply.</li>
+</ul>
+
+<h2>How to apply</h2>
+<h3>Step 1 — Pick 2 of the 3 scripts below</h3>
+<p>Choose the two that best show off your range:</p>
+<ul>
+  <li><strong>Option 1 — Corporate &amp; Professional:</strong> tests B2B authority, clear articulation, executive presence.</li>
+  <li><strong>Option 2 — Ultra-Casual &amp; Irreverent:</strong> tests deadpan delivery, comedic timing, natural authenticity.</li>
+  <li><strong>Option 3 — High-Energy D2C / Direct Challenge:</strong> tests rapid-fire cadence, screen presence, persuasive urgency.</li>
+</ul>
+<p class="tip">💡 Tip: picking two contrasting styles (e.g., Option 1 + Option 2) shows us more range than two similar ones.</p>
+
+<h3>Step 2 — Record your demos</h3>
+<p><strong>Setup:</strong></p>
+<ul>
+  <li>📱 Any modern smartphone or webcam is fine.</li>
+  <li>🎧 Record in a quiet room. Clear audio is non-negotiable.</li>
+  <li>🖼️ Frame yourself from the chest up, camera at eye level.</li>
+  <li>📖 Copy and paste the script into your choice of a teleprompter app.</li>
+</ul>
+<p><strong>Delivery:</strong></p>
+<ul>
+  <li>Deliver each script exactly as written — these are real client-style scripts, so treat "SUPERCOOL" as the SaaS product you're selling.</li>
+  <li>Multiple takes are fine — submit your best one. <strong>No fancy editing needed</strong> — a single raw take is perfect. We're judging your script delivery, not your editing skills.</li>
+  <li>Each demo should be one continuous take per script.</li>
+</ul>
+
+<h3>Step 3 — Upload and submit</h3>
+<ul>
+  <li>Name your files <code>FirstName_LastName_Option#.mp4</code> (e.g., <code>Jane_Doe_Option1.mp4</code>).</li>
+  <li>Upload both videos to Google Drive, Dropbox, or WeTransfer and share the link — <strong>make sure permissions are set so anyone with the link can view.</strong></li>
+  <li>Send your submission to <strong>caleb@diffdev.io</strong> with the subject line: <strong>"Spokesperson Application — [Your Name]"</strong></li>
+  <li>Please include in your email: your name and university/major; confirmation that you're 18+; the link to your two videos; and (optional) a link to any social media, TikTok, or past video work.</li>
+</ul>
+<h2>What happens next</h2>
+<ol>
+  <li><strong>Assessment review</strong> — we review your two demo recordings.</li>
+  <li><strong>Pass? You're on the board.</strong> Successful applicants are added to our board of available actors.</li>
+  <li><strong>Orders come in.</strong> Our SaaS clients place orders for a few videos at a time and request talent. When you match what they need, we reach out to book you.</li>
+  <li><strong>You get paid.</strong> $100 per script, delivered in 15–30 minutes of recording time.</li>
+  <li><strong>Rise or rest.</strong> If you do well and the client loves you, you'll get requested again and again. Your workload grows with your performance.</li>
+</ol>
+
+<h2 id="scripts">The assessment scripts</h2>
+<p>Choose 2 of the 3 options. Record and upload as instructed above.</p>
+<details>
+  <summary>Option 1 — Corporate &amp; Professional</summary>
+  <p class="note2">Tests B2B authority, clear articulation, and executive presence.</p>
+  <div class="script">
+  <p>Navigating product development and market optimization just got easier with SUPERCOOL, your go-to platform for AI-powered product insights.</p>
+  <p>SUPERCOOL dives deep into primary purchase motivations, pinpointing exactly what drives modern consumers to buy. With these real-time analytics, you'll instantly identify what's meeting buyer expectations—and precisely what needs fine-tuning.</p>
+  <p>Not sure why a key line isn't performing up to forecast? SUPERCOOL isolates specific pain points directly from verified customer feedback, benchmarking them against top market category leaders while delivering targeted, actionable recommendations for immediate improvement.</p>
+  <p>Looking for your brand's next breakthrough idea? SUPERCOOL uncovers hidden innovation opportunities by evaluating emerging market trends through a precise product lens—giving you the strategic edge needed to stay ahead of shifting consumer demand.</p>
+  <p>And soon, you'll track every single product line's performance with a unified Health Score, benchmarking across major omni-channel retail outlets to see exactly where your portfolio thrives.</p>
+  <p>SUPERCOOL represents the next generation of automated review analysis, delivering tailored recommendations right down to the individual SKU level—complete with direct quotes from real consumers to support every finding.</p>
+  <p>With just a few clicks, unlock the high-impact data you need to refine, innovate, and make smarter decisions—right when you need them most.</p>
   </div>
-  <p class="fine">Freelance · On-demand · 18+ · No experience required</p>
-</section>
-<section>
-  <p class="kicker">The gig</p>
-  <h2>Simple work, real pay.</h2>
-  <div class="cards">
-    <div class="card"><div class="ico">🎬</div><h3>Show up &amp; deliver</h3><p>Read client scripts from a teleprompter, on camera, with energy and personality. Scripting, editing, and set design are all handled for you.</p></div>
-    <div class="card"><div class="ico">📥</div><h3>Work flows in on demand</h3><p>SaaS clients place orders for a few videos at a time and request talent. Pass the assessment, join our board of available actors, and we book you when an order fits you.</p></div>
-    <div class="card"><div class="ico">📈</div><h3>Get requested by name</h3><p>When clients love your takes, they ask for you again and again — more bookings, more often. Stick with one client or appear across many.</p></div>
+</details>
+<details>
+  <summary>Option 2 — Ultra-Casual &amp; Irreverent</summary>
+  <p class="note2">Tests deadpan delivery, comedic timing, and natural authenticity.</p>
+  <div class="script">
+  <p>Making stuff people actually buy is hard. SUPERCOOL makes it way less painful.</p>
+  <p>It's an AI tool that digs into human brains to figure out why people actually buy your product. Or why they don't.</p>
+  <p>Got a product that's totally dying out there? SUPERCOOL reads through real customer feedback, compares it to your biggest competitors, and tells you how to fix it before it's too late.</p>
+  <p>Need a crazy good idea for your next launch? It tracks weird, emerging trends so you can jump on them first and destroy the competition.</p>
+  <p>Plus, we're dropping a Health Score feature soon. You'll see exactly where your stuff is killing it across every major store, and where it's getting crushed.</p>
+  <p>SUPERCOOL is review analysis on cheat codes. Down to the exact item. Real quotes. Real feedback. Zero guesswork.</p>
+  <p>Click a few buttons. Get the data. Stop making junk nobody wants.</p>
   </div>
-  <p class="note">This is freelance gig work — there are no guaranteed minimum hours. How much you work depends on demand and how well your videos land with clients.</p>
-</section>
-<section>
-  <p class="kicker">Who we're looking for</p>
-  <h2>Personality over résumés.</h2>
-  <ul class="check">
-    <li><span class="ck">✓</span><span>You're <strong>18 or older</strong> (required).</span></li>
-    <li><span class="ck">✓</span><span>You're <strong>fun, bubbly, and full of character</strong> — the friend everyone wants in their group project.</span></li>
-    <li><span class="ck">✓</span><span>You can <strong>read from a teleprompter</strong> and make it sound natural — this is the #1 skill.</span></li>
-    <li><span class="ck">✓</span><span>You're a <strong>clear English speaker</strong> with an easy-to-understand delivery.</span></li>
-    <li><span class="ck">✓</span><span>You're <strong>comfortable on camera</strong> — no prior acting experience needed; confidence beats a résumé.</span></li>
-    <li><span class="ck">✓</span><span><strong>All backgrounds &amp; communities encouraged</strong> — we celebrate diversity.</span></li>
-  </ul>
-</section>
-<section id="apply">
-  <p class="kicker">How to apply</p>
-  <h2>Your audition is two scripts away.</h2>
-  <div class="step">
-    <div class="num">1</div>
-    <div>
-      <h3>Pick 2 of the 3 scripts below</h3>
-      <p>Choose the two that best show off your range:</p>
-      <div class="opts">
-        <div class="opt"><span class="tag">Option 1</span><h4>Corporate &amp; Professional</h4><p>Tests B2B authority, clear articulation, executive presence.</p></div>
-        <div class="opt"><span class="tag">Option 2</span><h4>Ultra-Casual &amp; Irreverent</h4><p>Tests deadpan delivery, comedic timing, natural authenticity.</p></div>
-        <div class="opt"><span class="tag">Option 3</span><h4>High-Energy D2C</h4><p>Tests rapid-fire cadence, screen presence, persuasive urgency.</p></div>
-      </div>
-      <div class="tip">💡 Tip: picking two <strong>contrasting</strong> styles (e.g., Option 1 + Option 2) shows us more range than two similar ones.</div>
-    </div>
+</details>
+<details>
+  <summary>Option 3 — High-Energy D2C / Direct Challenge</summary>
+  <p class="note2">Tests rapid-fire cadence, screen presence, and persuasive urgency.</p>
+  <div class="script">
+  <p>Want to know the real reason your product isn't selling as well as your competitor's? Your customers already left the answer in your reviews—you're just not reading them.</p>
+  <p>SUPERCOOL pulls the curtain back on real consumer behavior using AI to show you exactly why people hit "buy"—or why they bail at checkout.</p>
+  <p>If you've got a product underperforming right now, SUPERCOOL instantly scans actual buyer feedback, stacks it against your top competitors, and tells you the exact tweaks to make today.</p>
+  <p>Looking for your next hero product? It spots blowout market trends before they go mainstream, giving you the playbook to launch first and dominate the space.</p>
+  <p>And coming soon? A unified Health Score to track your entire inventory performance across every major retail channel in real time.</p>
+  <p>SUPERCOOL is review analysis built for speed. SKU-level precision. Direct quotes. Zero fluff.</p>
+  <p>Unlock the data, fix your funnel, and scale smarter—starting right now.</p>
   </div>
-  <div class="step">
-    <div class="num">2</div>
-    <div>
-      <h3>Record your demos</h3>
-      <p><strong>Setup:</strong></p>
-      <ul>
-        <li>📱 Any modern smartphone or webcam is fine.</li>
-        <li>🎧 Record in a quiet room — clear audio is non-negotiable.</li>
-        <li>🖼️ Frame yourself from the chest up, camera at eye level.</li>
-        <li>📖 Copy each script into a teleprompter app.</li>
-      </ul>
-      <p><strong>Delivery:</strong></p>
-      <ul>
-        <li>Deliver each script exactly as written — treat “SUPERCOOL” as the SaaS product you're selling.</li>
-        <li>Multiple takes are fine — submit your best one, as a single continuous take.</li>
-        <li>No fancy editing needed — we're judging your delivery, not your editing skills.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="step">
-    <div class="num">3</div>
-    <div>
-      <h3>Upload &amp; submit</h3>
-      <p>Name your files <code>FirstName_LastName_Option#.mp4</code> (e.g., <code>Jane_Doe_Option1.mp4</code>).</p>
-      <p>Upload both videos to Google Drive, Dropbox, or WeTransfer — set permissions so <strong>anyone with the link can view</strong>.</p>
-      <p>Email your submission to <strong>caleb@diffdev.io</strong> with the subject line <strong>“Spokesperson Application — [Your Name]”</strong>, including:</p>
-      <ul>
-        <li>Your name and university/major</li>
-        <li>Confirmation that you're 18+</li>
-        <li>The link to your two videos</li>
-        <li>(Optional) a link to social media, TikTok, or past video work</li>
-      </ul>
-      <div class="submit">
-        <strong>Ready?</strong> Send your best takes:
-        <a class="btn primary" href="mailto:caleb@diffdev.io?subject=Spokesperson%20Application">✉️ Email your audition</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section>
-  <p class="kicker">What happens next</p>
-  <h2>From audition to bookings.</h2>
-  <ol class="next">
-    <li><strong>Assessment review</strong> — we review your two demo recordings.</li>
-    <li><strong>Pass? You're on the board.</strong> Successful applicants are added to our board of available actors.</li>
-    <li><strong>Orders come in.</strong> SaaS clients place orders and request talent; when you match the request, we book you.</li>
-    <li><strong>You get paid.</strong> $100 per completed script — 15–30 minutes of recording time each.</li>
-    <li><strong>Rise or rest.</strong> Do well and clients request you by name; your workload grows with your performance.</li>
-  </ol>
-</section>
-<section id="scripts">
-  <p class="kicker">The assessment scripts</p>
-  <h2>Choose 2 of the 3 options.</h2>
-  <p class="lead">Full scripts below — copy yours into a teleprompter app and record as instructed above.</p>
-  <details>
-    <summary>Option 1 — Corporate &amp; Professional</summary>
-    <div class="acc">
-      <p class="note2">Tests B2B authority, clear articulation, and executive presence.</p>
-      <div class="script">
-        <p>Navigating product development and market optimization just got easier with SUPERCOOL, your go-to platform for AI-powered product insights.</p>
-        <p>SUPERCOOL dives deep into primary purchase motivations, pinpointing exactly what drives modern consumers to buy. With these real-time analytics, you'll instantly identify what's meeting buyer expectations—and precisely what needs fine-tuning.</p>
-        <p>Not sure why a key line isn't performing up to forecast? SUPERCOOL isolates specific pain points directly from verified customer feedback, benchmarking them against top market category leaders while delivering targeted, actionable recommendations for immediate improvement.</p>
-        <p>Looking for your brand's next breakthrough idea? SUPERCOOL uncovers hidden innovation opportunities by evaluating emerging market trends through a precise product lens—giving you the strategic edge needed to stay ahead of shifting consumer demand.</p>
-        <p>And soon, you'll track every single product line's performance with a unified Health Score, benchmarking across major omni-channel retail outlets to see exactly where your portfolio thrives.</p>
-        <p>SUPERCOOL represents the next generation of automated review analysis, delivering tailored recommendations right down to the individual SKU level—complete with direct quotes from real consumers to support every finding.</p>
-        <p>With just a few clicks, unlock the high-impact data you need to refine, innovate, and make smarter decisions—right when you need them most.</p>
-      </div>
-    </div>
-  </details>
-  <details>
-    <summary>Option 2 — Ultra-Casual &amp; Irreverent</summary>
-    <div class="acc">
-      <p class="note2">Tests deadpan delivery, comedic timing, and natural authenticity.</p>
-      <div class="script">
-        <p>Making stuff people actually buy is hard. SUPERCOOL makes it way less painful.</p>
-        <p>It's an AI tool that digs into human brains to figure out why people actually buy your product. Or why they don't.</p>
-        <p>Got a product that's totally dying out there? SUPERCOOL reads through real customer feedback, compares it to your biggest competitors, and tells you how to fix it before it's too late.</p>
-        <p>Need a crazy good idea for your next launch? It tracks weird, emerging trends so you can jump on them first and destroy the competition.</p>
-        <p>Plus, we're dropping a Health Score feature soon. You'll see exactly where your stuff is killing it across every major store, and where it's getting crushed.</p>
-        <p>SUPERCOOL is review analysis on cheat codes. Down to the exact item. Real quotes. Real feedback. Zero guesswork.</p>
-        <p>Click a few buttons. Get the data. Stop making junk nobody wants.</p>
-      </div>
-    </div>
-  </details>
-  <details>
-    <summary>Option 3 — High-Energy D2C / Direct Challenge</summary>
-    <div class="acc">
-      <p class="note2">Tests rapid-fire cadence, screen presence, and persuasive urgency.</p>
-      <div class="script">
-        <p>Want to know the real reason your product isn't selling as well as your competitor's? Your customers already left the answer in your reviews—you're just not reading them.</p>
-        <p>SUPERCOOL pulls the curtain back on real consumer behavior using AI to show you exactly why people hit “buy”—or why they bail at checkout.</p>
-        <p>If you've got a product underperforming right now, SUPERCOOL instantly scans actual buyer feedback, stacks it against your top competitors, and tells you the exact tweaks to make today.</p>
-        <p>Looking for your next hero product? It spots blowout market trends before they go mainstream, giving you the playbook to launch first and dominate the space.</p>
-        <p>And coming soon? A unified Health Score to track your entire inventory performance across every major retail channel in real time.</p>
-        <p>SUPERCOOL is review analysis built for speed. SKU-level precision. Direct quotes. Zero fluff.</p>
-        <p>Unlock the data, fix your funnel, and scale smarter—starting right now.</p>
-      </div>
-    </div>
-  </details>
-</section>
-<section>
-  <p class="kicker">FAQ</p>
-  <h2>Quick answers.</h2>
-  <div class="faq">
-  <details><summary>Do I need acting experience?</summary><div class="acc">No. We care about energy, clarity, and teleprompter delivery — not a résumé.</div></details>
-  <details><summary>Do I need professional equipment?</summary><div class="acc">No. A phone, a window with decent light, and a quiet room are enough to audition.</div></details>
-  <details><summary>Is this full-time?</summary><div class="acc">No — it's on-demand and performance-based. You're booked when client orders come in and you fit the request.</div></details>
-  <details><summary>When do I get paid?</summary><div class="acc">Per completed script: $100. Payment terms are confirmed when you're added to the roster.</div></details>
-  <details><summary>Can I do this around my class schedule?</summary><div class="acc">Yes — that's the whole idea. Scripts take 15–30 minutes each, whenever a booking comes in.</div></details>
-  <details><summary>Do I need to memorize lines?</summary><div class="acc">No. Everything is read from a teleprompter. Your job is to make it sound like you're not reading.</div></details>
-  </div>
-</section>
-<section class="band">
-  <h2>Ready? Your audition is two scripts away.</h2>
-  <p>Pick two contrasting options, hit record, and send us your best takes. We review every submission.</p>
-  <a class="btn primary" href="mailto:caleb@diffdev.io?subject=Spokesperson%20Application">✉️ Apply now — $100 per script</a>
-</section>
-</main>
+</details>
+
+<h2>Common questions</h2>
+<div class="faq">
+<p class="q">Do I need acting experience?</p>
+<p class="a">No. We care about energy, clarity, and teleprompter delivery — not a résumé.</p>
+<p class="q">Do I need professional equipment?</p>
+<p class="a">No. A phone, a window with decent light, and a quiet room are enough to audition.</p>
+<p class="q">Is this full-time?</p>
+<p class="a">No — it's on-demand and performance-based. You're booked when client orders come in and you fit the request.</p>
+<p class="q">When do I get paid?</p>
+<p class="a">Per completed script: $100. Payment terms are confirmed when you're added to the roster.</p>
+<p class="q">Can I do this around my class schedule?</p>
+<p class="a">Yes — that's the whole idea. Scripts take 15–30 minutes each, whenever a booking comes in.</p>
+<p class="q">Do I need to memorize lines?</p>
+<p class="a">No. Everything is read from a teleprompter. Your job is to make it sound like you're not reading.</p>
+</div>
+
+<h2>Ready to apply?</h2>
+<p>Pick two contrasting scripts, hit record, and send us your best takes. We review every submission.</p>
+<p><a class="btn primary" href="mailto:caleb@diffdev.io?subject=Spokesperson%20Application">✉️ Apply now — $100 per script</a></p>
+
 <footer>
-  <div class="wrap">
-    <div class="frow">
-      <span>🎬 <strong>Video Deck</strong> — real humans, not AI</span>
-      <span><a href="https://diffdev.io/">diffdev.io</a> · <a href="mailto:caleb@diffdev.io">caleb@diffdev.io</a></span>
-    </div>
-    <p class="eeo">Video Deck is an equal opportunity ensemble. We celebrate diversity and are committed to building a talent roster that reflects it. All applicants 18+ will be considered without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or any other legally protected status.</p>
-    <p>© 2026 Video Deck · hosted on diffdev.io</p>
+  <div class="frow">
+    <span>🎬 <strong>Video Deck</strong> — real humans, not AI</span>
+    <span><a href="https://diffdev.io/">diffdev.io</a> · <a href="mailto:caleb@diffdev.io">caleb@diffdev.io</a></span>
   </div>
+  <p class="eeo">Video Deck is an equal opportunity ensemble. We celebrate diversity and are committed to building a talent roster that reflects it. All applicants 18+ will be considered without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, or any other legally protected status.</p>
+  <p>© 2026 Video Deck · hosted on diffdev.io</p>
 </footer>
+</main>
 <div class="mobile-cta"><a class="btn primary" href="mailto:caleb@diffdev.io?subject=Spokesperson%20Application">Apply — $100/script</a></div>
 </body>
 </html>
